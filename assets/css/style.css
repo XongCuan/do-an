@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+/* ==== Common ======= */
+a {
+    text-decoration: none;
+}
+.btn {
+    color: #fff;
+    /* do đang dùng thẻ a là inline 
+    nó chỉ chứa đủ chiều rộng của nó. chuyển qua inline - block là 1 khối,  */
+    text-align: center;
+    min-width: 118px;
+    display: inline-block;
+    font-size: 16px;
+    padding: 0px 16px;
+    line-height: 50px;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 24.5px;
+    background: #171100;
+}
+.main-content {
+    width: 1170px;
+    /* max-w để khi kéo thu gọn lại thì nó cũng sẽ có khoảng cách 2 bên */
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+    /* 2 đoạn margin l r là để căn giữa */
+}
+/* ==== Fonts ======= */
+
+/*========== Header ========== */
+.header {
+    background: #fffcf4;
+}
+.header.fixed {
+    position: sticky;
+    top: -28px;
+}
+
+.header .body {
+    display: flex;
+    align-items: center;
+    padding: 36px 0px 8px;
+}
+.header .nav {
+    margin-left: auto;
+    /* có nghĩa là 
+        thẻ nav này chưa nội dung mà mf thì nó sẽ đẩy
+        toàn bộ nav này qua bên phải. 
+    */
+}
+.header .nav ul {
+    display: flex;
+}
+
+.nav a {
+    position: relative;
+    padding: 8px 21px;
+    color: #5f5b53;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.nav a:hover,
+.nav li .active a {
+    /* font-weight: 600; */
+    /* Dùng text-shadow để khi hover vào sẽ ko bị giật các nội dung xung quanh */
+    text-shadow: 1px 0 0 currentColor;
+    color: #171100;
+}
+
+/* tác động thẻ a đang có active */
+.nav li.active a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 21px;
+    bottom: 6px;
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background: #171100;
+}
+.sign-up-btn {
+    min-width: 144px;
+}
+.header .action {
+    margin-left: 49px;
+}
